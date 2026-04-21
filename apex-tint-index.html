@@ -1,0 +1,1650 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Apex Tint Co. | Window Tint & Paint Protection | Allen, TX</title>
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><polygon points='0,0 32,0 32,24 27,32 0,32' fill='%23c8102e'/><text x='16' y='22' font-family='sans-serif' font-weight='900' font-size='16' text-anchor='middle' fill='white'>A</text></svg>" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=DM+Sans:wght@300;400;500&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet" />
+
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --red:#c8102e;
+  --red2:#e8172e;
+  --red-dim:rgba(200,16,46,0.12);
+  --black:#080808;
+  --black2:#0f0f0f;
+  --black3:#161616;
+  --black4:#1e1e1e;
+  --white:#f5f5f5;
+  --muted:#5a5a5a;
+  --muted2:#3a3a3a;
+  --syne:'Syne',sans-serif;
+  --dm:'DM Sans',sans-serif;
+  --mono:'DM Mono',monospace;
+  --nav-h:72px;
+}
+
+html{scroll-behavior:smooth}
+body{background:var(--black);color:var(--white);font-family:var(--dm);font-weight:300;line-height:1.65;overflow-x:hidden}
+::selection{background:var(--red);color:#fff}
+::-webkit-scrollbar{width:2px}
+::-webkit-scrollbar-track{background:#000}
+::-webkit-scrollbar-thumb{background:var(--red)}
+
+img{display:block;max-width:100%}
+a{text-decoration:none;color:inherit}
+
+.page{display:none}
+.page.active{display:block}
+
+/* ── NAV ── */
+nav{
+  position:fixed;top:0;left:0;right:0;z-index:1000;
+  height:var(--nav-h);
+  display:flex;align-items:center;justify-content:space-between;
+  padding:0 48px;
+  background:rgba(8,8,8,0.96);
+  border-bottom:1px solid rgba(255,255,255,0.05);
+  backdrop-filter:blur(12px);
+}
+.nav-logo{
+  font-family:var(--syne);font-weight:800;font-size:18px;letter-spacing:0.5px;
+  color:var(--white);cursor:pointer;display:flex;align-items:center;gap:10px;
+}
+.nav-logo-mark{
+  width:34px;height:34px;background:var(--red);
+  display:flex;align-items:center;justify-content:center;
+  font-family:var(--syne);font-weight:800;font-size:14px;color:#fff;
+  letter-spacing:0;clip-path:polygon(0 0,100% 0,100% 75%,85% 100%,0 100%);
+}
+.nav-links{
+  display:flex;align-items:center;gap:36px;list-style:none;
+}
+.nav-links a{
+  font-family:var(--dm);font-size:13px;font-weight:400;letter-spacing:0.5px;
+  color:rgba(245,245,245,0.5);transition:color 0.2s;cursor:pointer;
+}
+.nav-links a:hover,.nav-links a.active-lnk{color:var(--white)}
+.nav-cta{
+  background:var(--red);color:#fff;
+  font-family:var(--dm);font-size:13px;font-weight:500;letter-spacing:0.3px;
+  padding:10px 24px;cursor:pointer;border:none;
+  transition:background 0.2s;white-space:nowrap;
+}
+.nav-cta:hover{background:var(--red2)}
+.ham{display:none;flex-direction:column;gap:5px;cursor:pointer;background:none;border:none;padding:4px}
+.ham span{display:block;width:24px;height:1.5px;background:rgba(245,245,245,0.7);transition:all 0.3s}
+.ham.open span:nth-child(1){transform:rotate(45deg) translate(4.5px,4.5px)}
+.ham.open span:nth-child(2){opacity:0}
+.ham.open span:nth-child(3){transform:rotate(-45deg) translate(4.5px,-4.5px)}
+.mob-menu{
+  display:none;position:fixed;top:var(--nav-h);left:0;right:0;z-index:999;
+  background:var(--black);flex-direction:column;padding:32px 48px;gap:20px;
+  border-bottom:1px solid rgba(255,255,255,0.05);
+}
+.mob-menu.open{display:flex}
+.mob-menu a{font-family:var(--syne);font-size:20px;font-weight:600;color:rgba(245,245,245,0.6);cursor:pointer;transition:color 0.2s}
+.mob-menu a:hover{color:var(--white)}
+.mob-menu .mob-cta{color:var(--red)}
+
+/* ── SHARED ── */
+.section-label{
+  font-family:var(--mono);font-size:11px;font-weight:500;letter-spacing:3px;
+  text-transform:uppercase;color:var(--red);margin-bottom:16px;
+  display:flex;align-items:center;gap:12px;
+}
+.section-label::after{content:'';flex:1;max-width:40px;height:1px;background:var(--red);opacity:0.5}
+
+.btn-red{
+  display:inline-block;background:var(--red);color:#fff;
+  font-family:var(--dm);font-size:13px;font-weight:500;letter-spacing:0.3px;
+  padding:13px 28px;cursor:pointer;border:none;transition:background 0.2s;
+}
+.btn-red:hover{background:var(--red2)}
+.btn-outline{
+  display:inline-block;background:transparent;color:var(--white);
+  font-family:var(--dm);font-size:13px;font-weight:500;letter-spacing:0.3px;
+  padding:12px 28px;cursor:pointer;border:1px solid rgba(255,255,255,0.2);
+  transition:border-color 0.2s,background 0.2s;
+}
+.btn-outline:hover{border-color:var(--red);background:rgba(200,16,46,0.08)}
+
+/* ────────── HOME ────────── */
+#home{padding-top:var(--nav-h)}
+
+/* Hero */
+.hero{
+  position:relative;height:calc(100vh - var(--nav-h));
+  overflow:hidden;background:#000;min-height:560px;
+}
+.hero-img{
+  position:absolute;inset:0;width:100%;height:100%;
+  object-fit:cover;object-position:center 40%;
+  filter:brightness(0.38);
+}
+.hero-overlay{
+  position:absolute;inset:0;
+  background:linear-gradient(105deg,rgba(8,8,8,0.75) 0%,rgba(8,8,8,0.1) 55%,transparent 100%);
+}
+.hero-content{
+  position:relative;z-index:2;height:100%;
+  display:flex;flex-direction:column;justify-content:flex-end;
+  padding:0 64px 72px;
+}
+.hero-eyebrow{
+  font-family:var(--mono);font-size:11px;letter-spacing:4px;
+  text-transform:uppercase;color:var(--red);margin-bottom:20px;
+}
+.hero-h1{
+  font-family:var(--syne);font-weight:800;
+  font-size:clamp(42px,7vw,96px);line-height:0.95;
+  letter-spacing:-1px;color:#fff;margin-bottom:24px;
+}
+.hero-h1 em{font-style:normal;color:var(--red)}
+.hero-sub{
+  font-family:var(--dm);font-size:15px;font-weight:300;
+  color:rgba(255,255,255,0.55);max-width:380px;line-height:1.7;
+  margin-bottom:36px;
+}
+.hero-actions{display:flex;gap:12px;flex-wrap:wrap}
+.hero-phone{
+  display:inline-flex;align-items:center;gap:8px;
+  font-family:var(--dm);font-size:13px;color:rgba(255,255,255,0.45);
+  padding:12px 0;transition:color 0.2s;
+}
+.hero-phone:hover{color:var(--white)}
+.hero-badge{
+  position:absolute;bottom:72px;right:64px;z-index:2;
+  text-align:right;
+}
+.hero-badge-num{
+  font-family:var(--syne);font-size:72px;font-weight:800;
+  color:rgba(255,255,255,0.04);line-height:1;letter-spacing:-3px;
+}
+.hero-badge-label{
+  font-family:var(--mono);font-size:10px;letter-spacing:3px;
+  text-transform:uppercase;color:rgba(255,255,255,0.2);
+  margin-top:-8px;
+}
+
+/* Ticker */
+.ticker-bar{
+  background:var(--red);padding:12px 0;overflow:hidden;white-space:nowrap;
+}
+.ticker-inner{
+  display:inline-flex;gap:0;animation:ticker 28s linear infinite;
+}
+.ticker-inner span{
+  font-family:var(--mono);font-size:11px;letter-spacing:2px;text-transform:uppercase;
+  color:rgba(255,255,255,0.85);padding:0 32px;
+}
+.ticker-inner span::after{content:'·';margin-left:32px;opacity:0.5}
+@keyframes ticker{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+
+/* Intro strip */
+.intro-strip{
+  display:grid;grid-template-columns:1fr 1fr;
+  border-bottom:1px solid rgba(255,255,255,0.04);
+}
+.intro-left{
+  background:var(--black2);padding:80px 64px;
+  border-right:1px solid rgba(255,255,255,0.04);
+}
+.intro-left h2{
+  font-family:var(--syne);font-weight:700;
+  font-size:clamp(28px,3.5vw,44px);line-height:1.1;
+  color:var(--white);margin-bottom:20px;
+}
+.intro-left p{font-size:15px;color:rgba(245,245,245,0.4);line-height:1.8;margin-bottom:16px}
+.intro-left p:last-of-type{margin-bottom:32px}
+.intro-right{position:relative;overflow:hidden;min-height:400px;background:var(--black3)}
+.intro-right img{width:100%;height:100%;object-fit:cover;object-position:center;filter:brightness(0.55);transition:transform 8s}
+.intro-right:hover img{transform:scale(1.03)}
+.intro-right-tag{
+  position:absolute;bottom:0;left:0;right:0;z-index:2;
+  padding:40px 32px 28px;
+  background:linear-gradient(to top,rgba(0,0,0,0.85),transparent);
+  font-family:var(--syne);font-size:13px;font-weight:600;letter-spacing:1px;
+  color:rgba(255,255,255,0.5);
+}
+
+/* Stats row */
+.stats-row{
+  display:grid;grid-template-columns:repeat(4,1fr);
+  border-bottom:1px solid rgba(255,255,255,0.04);
+  background:var(--black);
+}
+.stat{
+  padding:44px 32px;text-align:center;
+  border-right:1px solid rgba(255,255,255,0.04);
+}
+.stat:last-child{border-right:none}
+.stat-n{
+  font-family:var(--syne);font-weight:800;font-size:48px;
+  color:var(--red);line-height:1;margin-bottom:8px;
+}
+.stat-l{
+  font-family:var(--mono);font-size:10px;letter-spacing:2.5px;
+  text-transform:uppercase;color:var(--muted);
+}
+
+/* Services preview */
+.svc-preview{padding:80px 64px;background:var(--black2)}
+.svc-preview-head{display:flex;align-items:flex-end;justify-content:space-between;margin-bottom:48px}
+.svc-preview-head h2{
+  font-family:var(--syne);font-weight:700;
+  font-size:clamp(28px,4vw,48px);color:var(--white);line-height:1;
+}
+.svc-grid{
+  display:grid;grid-template-columns:repeat(2,1fr);gap:2px;
+}
+.svc-card{
+  position:relative;overflow:hidden;
+  height:320px;cursor:pointer;background:var(--black3);
+}
+.svc-card img{
+  width:100%;height:100%;object-fit:cover;object-position:center;
+  filter:brightness(0.38);transition:filter 0.5s,transform 6s;
+}
+.svc-card:hover img{filter:brightness(0.52);transform:scale(1.04)}
+.svc-card-body{
+  position:absolute;inset:0;padding:32px;
+  display:flex;flex-direction:column;justify-content:flex-end;
+  background:linear-gradient(to top,rgba(0,0,0,0.9) 0%,rgba(0,0,0,0.1) 60%,transparent 100%);
+  z-index:2;
+}
+.svc-card-num{
+  font-family:var(--mono);font-size:10px;letter-spacing:3px;
+  color:var(--red);margin-bottom:12px;
+}
+.svc-card-name{
+  font-family:var(--syne);font-weight:700;font-size:22px;
+  color:#fff;margin-bottom:6px;
+}
+.svc-card-sub{font-size:13px;color:rgba(255,255,255,0.4);font-weight:300}
+.svc-card-arrow{
+  position:absolute;top:24px;right:24px;
+  width:36px;height:36px;background:var(--red);
+  display:flex;align-items:center;justify-content:center;
+  opacity:0;transform:translateY(-4px);transition:all 0.3s;z-index:3;
+}
+.svc-card:hover .svc-card-arrow{opacity:1;transform:translateY(0)}
+.svc-card-arrow svg{width:14px;height:14px;stroke:#fff;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+
+/* Wide card */
+.svc-card.wide{grid-column:1/-1;height:260px}
+
+/* Process */
+.process-section{padding:80px 64px;background:var(--black);border-top:1px solid rgba(255,255,255,0.04)}
+.process-section h2{
+  font-family:var(--syne);font-weight:700;font-size:clamp(26px,3.5vw,42px);
+  color:var(--white);margin-bottom:56px;
+}
+.process-steps{display:grid;grid-template-columns:repeat(4,1fr);gap:0}
+.process-step{
+  padding:0 40px 0 0;border-right:1px solid rgba(255,255,255,0.04);
+}
+.process-step:last-child{border-right:none}
+.step-num{
+  font-family:var(--syne);font-weight:800;font-size:56px;
+  color:rgba(255,255,255,0.04);line-height:1;margin-bottom:16px;
+}
+.step-title{
+  font-family:var(--syne);font-weight:600;font-size:16px;
+  color:var(--white);margin-bottom:10px;
+}
+.step-desc{font-size:14px;color:rgba(245,245,245,0.35);line-height:1.7}
+
+/* Reviews */
+.reviews-section{
+  padding:80px 64px;background:var(--black2);
+  border-top:1px solid rgba(255,255,255,0.04);
+}
+.reviews-section h2{
+  font-family:var(--syne);font-weight:700;font-size:clamp(26px,3.5vw,42px);
+  color:var(--white);margin-bottom:48px;
+}
+.reviews-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.review-card{
+  background:var(--black3);padding:32px;
+  border:1px solid rgba(255,255,255,0.04);
+  transition:border-color 0.3s;
+}
+.review-card:hover{border-color:rgba(200,16,46,0.25)}
+.review-stars{color:var(--red);font-size:14px;margin-bottom:16px;letter-spacing:2px}
+.review-text{
+  font-size:14px;color:rgba(245,245,245,0.5);line-height:1.8;
+  margin-bottom:20px;font-style:italic;
+}
+.review-author{
+  font-family:var(--syne);font-size:13px;font-weight:600;
+  color:var(--white);
+}
+.review-vehicle{
+  font-family:var(--mono);font-size:10px;letter-spacing:2px;
+  text-transform:uppercase;color:var(--muted);margin-top:3px;
+}
+
+/* CTA band */
+.cta-band{
+  padding:80px 64px;
+  background:var(--black3);
+  border-top:1px solid rgba(255,255,255,0.04);
+  display:flex;align-items:center;justify-content:space-between;gap:40px;
+  flex-wrap:wrap;position:relative;overflow:hidden;
+}
+.cta-band::before{
+  content:'APEX';position:absolute;right:-24px;top:50%;
+  transform:translateY(-50%);
+  font-family:var(--syne);font-size:200px;font-weight:800;
+  color:rgba(255,255,255,0.018);pointer-events:none;white-space:nowrap;letter-spacing:-8px;
+}
+.cta-band-left h2{
+  font-family:var(--syne);font-weight:700;
+  font-size:clamp(26px,4vw,48px);color:var(--white);line-height:1.1;
+  margin-bottom:10px;
+}
+.cta-band-left p{font-size:14px;color:rgba(245,245,245,0.4)}
+.cta-band-right{display:flex;align-items:center;gap:16px;flex-wrap:wrap}
+
+/* ────────── ABOUT ────────── */
+#about{padding-top:var(--nav-h)}
+.about-hero{
+  position:relative;height:480px;overflow:hidden;background:#000;
+}
+.about-hero img{
+  width:100%;height:100%;object-fit:cover;object-position:center 35%;
+  filter:brightness(0.3);
+}
+.about-hero-content{
+  position:absolute;inset:0;z-index:2;
+  display:flex;flex-direction:column;justify-content:flex-end;
+  padding:0 64px 60px;
+}
+.about-hero-content h1{
+  font-family:var(--syne);font-weight:800;
+  font-size:clamp(36px,6vw,80px);line-height:0.95;
+  letter-spacing:-1px;color:#fff;
+}
+.about-hero-content h1 span{color:var(--red)}
+.about-hero-content p{
+  font-size:15px;color:rgba(255,255,255,0.4);
+  margin-top:16px;max-width:420px;
+}
+
+.about-body{
+  display:grid;grid-template-columns:1fr 1fr;
+  border-bottom:1px solid rgba(255,255,255,0.04);
+}
+.about-text{
+  padding:80px 64px;background:var(--black2);
+  border-right:1px solid rgba(255,255,255,0.04);
+}
+.about-text h2{
+  font-family:var(--syne);font-weight:700;font-size:clamp(24px,3vw,36px);
+  color:var(--white);margin-bottom:24px;line-height:1.15;
+}
+.about-text p{font-size:15px;color:rgba(245,245,245,0.45);line-height:1.85;margin-bottom:14px}
+.about-text p:last-of-type{margin-bottom:32px}
+
+.about-img{position:relative;overflow:hidden;background:var(--black3);min-height:500px}
+.about-img img{width:100%;height:100%;object-fit:cover;filter:brightness(0.6)}
+
+.about-pillars{
+  display:grid;grid-template-columns:repeat(3,1fr);
+  border-bottom:1px solid rgba(255,255,255,0.04);
+  background:var(--black);
+}
+.pillar{
+  padding:52px 44px;border-right:1px solid rgba(255,255,255,0.04);
+}
+.pillar:last-child{border-right:none}
+.pillar-num{
+  font-family:var(--syne);font-weight:800;font-size:40px;
+  color:rgba(200,16,46,0.15);margin-bottom:16px;line-height:1;
+}
+.pillar-title{
+  font-family:var(--syne);font-weight:600;font-size:17px;
+  color:var(--white);margin-bottom:10px;
+}
+.pillar-desc{font-size:14px;color:rgba(245,245,245,0.35);line-height:1.75}
+
+.about-cta-row{
+  padding:64px;background:var(--black2);
+  display:flex;align-items:center;justify-content:space-between;gap:24px;flex-wrap:wrap;
+  border-bottom:1px solid rgba(255,255,255,0.04);
+}
+.about-cta-row h3{
+  font-family:var(--syne);font-weight:700;font-size:clamp(22px,3vw,34px);
+  color:var(--white);
+}
+.about-cta-row p{font-size:14px;color:rgba(245,245,245,0.4);margin-top:6px}
+
+/* ────────── SERVICES ────────── */
+#services{padding-top:var(--nav-h)}
+.services-hero{
+  padding:80px 64px 0;background:var(--black);
+}
+.services-hero h1{
+  font-family:var(--syne);font-weight:800;
+  font-size:clamp(36px,6vw,80px);line-height:0.95;letter-spacing:-1px;
+  color:var(--white);margin-bottom:16px;
+}
+.services-hero p{
+  font-size:15px;color:rgba(245,245,245,0.4);
+  max-width:480px;margin-bottom:60px;line-height:1.8;
+}
+.services-divider{
+  height:1px;background:linear-gradient(to right,var(--red),transparent 60%);
+  margin:0 64px;opacity:0.4;
+}
+
+.svc-list{padding:0 64px 80px;background:var(--black)}
+.svc-row{
+  display:grid;grid-template-columns:1fr 1.4fr;
+  border-bottom:1px solid rgba(255,255,255,0.04);
+  min-height:360px;
+}
+.svc-row:nth-child(even){direction:rtl}
+.svc-row:nth-child(even) *{direction:ltr}
+.svc-row-img{
+  position:relative;overflow:hidden;background:var(--black3);
+}
+.svc-row-img img{
+  width:100%;height:100%;object-fit:cover;filter:brightness(0.55);
+  transition:transform 6s,filter 0.4s;
+}
+.svc-row:hover .svc-row-img img{transform:scale(1.04);filter:brightness(0.65)}
+.svc-row-num-overlay{
+  position:absolute;bottom:16px;left:20px;z-index:2;
+  font-family:var(--syne);font-weight:800;font-size:80px;
+  color:rgba(255,255,255,0.06);line-height:1;pointer-events:none;
+}
+.svc-row-body{
+  padding:52px 56px;background:var(--black2);display:flex;flex-direction:column;justify-content:center;
+}
+.svc-row-name{
+  font-family:var(--syne);font-weight:700;font-size:clamp(22px,3vw,36px);
+  color:var(--white);margin-bottom:14px;line-height:1.1;
+}
+.svc-row-desc{
+  font-size:14px;color:rgba(245,245,245,0.4);line-height:1.85;
+  margin-bottom:28px;
+}
+.svc-includes{margin-bottom:28px}
+.svc-includes-label{
+  font-family:var(--mono);font-size:10px;letter-spacing:2.5px;
+  text-transform:uppercase;color:var(--red);margin-bottom:14px;
+}
+.svc-include-list{
+  display:grid;grid-template-columns:1fr 1fr;gap:0;
+}
+.svc-include-item{
+  font-size:13px;color:rgba(245,245,245,0.45);
+  padding:7px 0;border-bottom:1px solid rgba(255,255,255,0.04);
+  display:flex;align-items:center;gap:8px;
+}
+.svc-include-item::before{content:'';width:12px;height:1px;background:var(--red);flex-shrink:0;opacity:0.6}
+.svc-price-row{
+  display:flex;align-items:center;gap:16px;flex-wrap:wrap;margin-top:4px;
+}
+.svc-price{
+  font-family:var(--syne);font-weight:700;font-size:28px;color:var(--white);
+}
+.svc-price-note{font-size:12px;color:rgba(245,245,245,0.3)}
+
+/* ────────── GALLERY ────────── */
+#gallery{padding-top:var(--nav-h)}
+.gallery-hero{
+  padding:64px 64px 0;background:var(--black);
+}
+.gallery-hero h1{
+  font-family:var(--syne);font-weight:800;
+  font-size:clamp(36px,6vw,80px);line-height:0.95;letter-spacing:-1px;
+  color:var(--white);margin-bottom:16px;
+}
+.gallery-hero p{
+  font-size:15px;color:rgba(245,245,245,0.4);
+  max-width:400px;margin-bottom:48px;
+}
+
+.gallery-filter{
+  display:flex;gap:0;padding:0 64px;margin-bottom:2px;
+  border-bottom:1px solid rgba(255,255,255,0.04);background:var(--black);
+}
+.gf-btn{
+  font-family:var(--mono);font-size:11px;letter-spacing:2px;text-transform:uppercase;
+  color:rgba(245,245,245,0.3);padding:14px 20px;cursor:pointer;border:none;
+  background:none;border-bottom:2px solid transparent;transition:all 0.2s;
+  margin-bottom:-1px;
+}
+.gf-btn.active,.gf-btn:hover{color:var(--white);border-bottom-color:var(--red)}
+
+.gallery-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:2px;
+  padding:2px;
+  background:var(--black);
+}
+.gal-item{
+  position:relative;overflow:hidden;
+  aspect-ratio:4/3;cursor:pointer;background:var(--black3);
+}
+.gal-item:nth-child(7){grid-column:1/3;aspect-ratio:auto;height:400px}
+.gal-item img{
+  width:100%;height:100%;object-fit:cover;
+  filter:brightness(0.75);transition:filter 0.4s,transform 5s;
+}
+.gal-item:hover img{filter:brightness(0.95);transform:scale(1.04)}
+.gal-overlay{
+  position:absolute;inset:0;background:rgba(0,0,0,0);
+  display:flex;align-items:center;justify-content:center;
+  opacity:0;transition:all 0.3s;z-index:2;
+}
+.gal-item:hover .gal-overlay{background:rgba(200,16,46,0.15);opacity:1}
+.gal-overlay svg{width:32px;height:32px;stroke:#fff;fill:none;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round}
+
+/* Lightbox */
+.lightbox{
+  display:none;position:fixed;inset:0;z-index:9999;
+  background:rgba(0,0,0,0.95);align-items:center;justify-content:center;
+}
+.lightbox.open{display:flex}
+.lightbox img{max-width:90vw;max-height:88vh;object-fit:contain}
+.lb-close{
+  position:absolute;top:24px;right:24px;
+  font-family:var(--syne);font-size:28px;color:#fff;cursor:pointer;
+  width:44px;height:44px;display:flex;align-items:center;justify-content:center;
+  background:rgba(255,255,255,0.08);transition:background 0.2s;
+}
+.lb-close:hover{background:var(--red)}
+
+/* ────────── CONTACT ────────── */
+#contact{padding-top:var(--nav-h)}
+.contact-hero{
+  padding:80px 64px 0;background:var(--black);
+}
+.contact-hero h1{
+  font-family:var(--syne);font-weight:800;
+  font-size:clamp(36px,6vw,80px);line-height:0.95;letter-spacing:-1px;
+  color:var(--white);margin-bottom:16px;
+}
+.contact-hero p{
+  font-size:15px;color:rgba(245,245,245,0.4);
+  max-width:400px;margin-bottom:64px;
+}
+
+.contact-body{
+  display:grid;grid-template-columns:1fr 1.2fr;
+  border-top:1px solid rgba(255,255,255,0.04);
+}
+.contact-info{
+  padding:64px;background:var(--black2);
+  border-right:1px solid rgba(255,255,255,0.04);
+  display:flex;flex-direction:column;gap:48px;
+}
+.contact-block-label{
+  font-family:var(--mono);font-size:10px;letter-spacing:3px;
+  text-transform:uppercase;color:var(--red);margin-bottom:10px;
+}
+.contact-block-value{
+  font-family:var(--syne);font-size:20px;font-weight:600;color:var(--white);
+  margin-bottom:4px;
+}
+.contact-block-value a{color:var(--white);transition:color 0.2s}
+.contact-block-value a:hover{color:var(--red)}
+.contact-block-sub{font-size:13px;color:rgba(245,245,245,0.35)}
+
+.hours-list{display:flex;flex-direction:column;gap:8px}
+.hours-row{
+  display:flex;justify-content:space-between;align-items:center;
+  font-size:14px;color:rgba(245,245,245,0.45);
+  padding-bottom:8px;border-bottom:1px solid rgba(255,255,255,0.04);
+}
+.hours-row:last-child{border-bottom:none}
+.hours-row .day{color:rgba(245,245,245,0.7);font-weight:400}
+
+.contact-form-wrap{
+  padding:64px;background:var(--black);
+}
+.contact-form-wrap h2{
+  font-family:var(--syne);font-weight:700;font-size:24px;
+  color:var(--white);margin-bottom:32px;
+}
+.form-row{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.form-group{display:flex;flex-direction:column;gap:8px;margin-bottom:16px}
+.form-group label{
+  font-family:var(--mono);font-size:10px;letter-spacing:2px;
+  text-transform:uppercase;color:rgba(245,245,245,0.35);
+}
+.form-group input,
+.form-group select,
+.form-group textarea{
+  background:var(--black2);
+  border:1px solid rgba(255,255,255,0.06);
+  color:var(--white);
+  font-family:var(--dm);font-size:14px;font-weight:300;
+  padding:13px 16px;
+  outline:none;
+  transition:border-color 0.2s;
+  width:100%;
+}
+.form-group input::placeholder,
+.form-group textarea::placeholder{color:rgba(245,245,245,0.2)}
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus{border-color:var(--red)}
+.form-group select option{background:var(--black2);color:var(--white)}
+.form-group textarea{resize:vertical;min-height:120px}
+.form-submit{margin-top:8px}
+.form-note{font-size:12px;color:rgba(245,245,245,0.25);margin-top:10px}
+.form-success{
+  display:none;padding:16px;background:rgba(200,16,46,0.1);
+  border:1px solid rgba(200,16,46,0.3);
+  font-size:14px;color:rgba(245,245,245,0.7);margin-top:16px;
+}
+
+/* Map */
+.map-section{
+  border-top:1px solid rgba(255,255,255,0.04);
+  height:380px;overflow:hidden;
+}
+.map-section iframe{width:100%;height:100%;border:0;filter:grayscale(1) brightness(0.6) contrast(1.1);display:block}
+
+/* ────────── FOOTER ────────── */
+footer{
+  background:var(--black);padding:56px 64px 32px;
+  border-top:1px solid rgba(255,255,255,0.04);
+}
+.footer-top{
+  display:grid;grid-template-columns:1.5fr 1fr 1fr;gap:48px;
+  padding-bottom:40px;border-bottom:1px solid rgba(255,255,255,0.04);
+  margin-bottom:28px;
+}
+.footer-brand-name{
+  font-family:var(--syne);font-weight:800;font-size:20px;
+  color:var(--white);display:flex;align-items:center;gap:10px;margin-bottom:12px;
+}
+.footer-tagline{font-size:13px;color:rgba(245,245,245,0.3);line-height:1.7;max-width:240px}
+.footer-col h4{
+  font-family:var(--mono);font-size:10px;letter-spacing:2.5px;
+  text-transform:uppercase;color:var(--red);margin-bottom:20px;
+}
+.footer-col ul{list-style:none;display:flex;flex-direction:column;gap:10px}
+.footer-col ul li a{
+  font-size:13px;color:rgba(245,245,245,0.35);
+  transition:color 0.2s;cursor:pointer;
+}
+.footer-col ul li a:hover{color:var(--white)}
+.footer-bottom{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px}
+.footer-copy{font-size:12px;color:rgba(245,245,245,0.2)}
+.footer-legal{display:flex;gap:20px}
+.footer-legal a{font-size:12px;color:rgba(245,245,245,0.2);cursor:pointer;transition:color 0.2s}
+.footer-legal a:hover{color:rgba(245,245,245,0.5)}
+
+/* ────────── RESPONSIVE ────────── */
+@media(max-width:900px){
+  nav{padding:0 20px}
+  .nav-links{display:none}
+  .nav-cta{display:none}
+  .ham{display:flex!important}
+  .mob-menu{padding:28px 20px}
+
+  /* Hero */
+  .hero{min-height:100svh}
+  .hero-content{padding:0 24px 52px}
+  .hero-h1{letter-spacing:-0.5px}
+  .hero-badge{display:none}
+
+  /* Ticker */
+  .ticker-bar{padding:10px 0}
+
+  /* Intro */
+  .intro-strip{grid-template-columns:1fr}
+  .intro-right{min-height:240px;order:- 1}
+  .intro-left{padding:48px 24px}
+
+  /* Stats */
+  .stats-row{grid-template-columns:repeat(2,1fr)}
+  .stat{border-bottom:1px solid rgba(255,255,255,0.04)}
+  .stat:nth-child(2){border-right:none}
+  .stat:nth-child(3){border-bottom:none}
+  .stat:nth-child(4){border-bottom:none}
+  .stat-n{font-size:38px}
+
+  /* Services preview */
+  .svc-preview{padding:48px 24px}
+  .svc-grid{grid-template-columns:1fr}
+  .svc-card{height:260px}
+  .svc-card.wide{grid-column:auto;height:220px}
+  .svc-preview-head{flex-direction:column;align-items:flex-start;gap:14px}
+
+  /* Process */
+  .process-section{padding:48px 24px}
+  .process-steps{grid-template-columns:1fr;gap:36px}
+  .process-step{border-right:none;padding:0;border-bottom:1px solid rgba(255,255,255,0.04);padding-bottom:32px}
+  .process-step:last-child{border-bottom:none;padding-bottom:0}
+  .step-num{font-size:40px;margin-bottom:10px}
+
+  /* Reviews */
+  .reviews-section{padding:48px 24px}
+  .reviews-grid{grid-template-columns:1fr}
+
+  /* CTA band */
+  .cta-band{padding:48px 24px;flex-direction:column;align-items:flex-start}
+  .cta-band::before{display:none}
+  .cta-band-right{width:100%;flex-direction:column}
+  .cta-band-right .btn-outline,
+  .cta-band-right .btn-red{width:100%;text-align:center;padding:15px}
+
+  /* About */
+  .about-hero{height:360px}
+  .about-hero-content{padding:0 24px 40px}
+  .about-body{grid-template-columns:1fr}
+  .about-text{padding:48px 24px;border-right:none;border-bottom:1px solid rgba(255,255,255,0.04)}
+  .about-img{min-height:280px}
+  .about-pillars{grid-template-columns:1fr}
+  .pillar{border-right:none;border-bottom:1px solid rgba(255,255,255,0.04)}
+  .pillar:last-child{border-bottom:none}
+  .about-cta-row{padding:40px 24px;flex-direction:column;align-items:flex-start}
+  .about-cta-row div:last-child{width:100%;flex-direction:column;display:flex}
+  .about-cta-row div:last-child .btn-outline,
+  .about-cta-row div:last-child .btn-red{width:100%;text-align:center;padding:15px}
+
+  /* Services page */
+  .services-hero{padding:48px 24px 0}
+  .services-divider{margin:0 24px}
+  .svc-list{padding:0 0 56px}
+  .svc-row{grid-template-columns:1fr;direction:ltr!important}
+  .svc-row:nth-child(even){direction:ltr!important}
+  .svc-row-img{height:220px}
+  .svc-row-body{padding:32px 24px}
+  .svc-include-list{grid-template-columns:1fr}
+  .svc-row-name{font-size:26px}
+
+  /* Gallery */
+  .gallery-hero{padding:48px 24px 0}
+  .gallery-filter{padding:0 16px;overflow-x:auto;-webkit-overflow-scrolling:touch}
+  .gallery-filter::-webkit-scrollbar{display:none}
+  .gf-btn{white-space:nowrap;padding:14px 14px}
+  .gallery-grid{grid-template-columns:1fr 1fr}
+  .gal-item:nth-child(7){grid-column:auto;height:auto;aspect-ratio:4/3}
+
+  /* Contact */
+  .contact-hero{padding:48px 24px 0}
+  .contact-body{grid-template-columns:1fr}
+  .contact-info{padding:36px 24px;border-right:none;border-bottom:1px solid rgba(255,255,255,0.04);gap:32px}
+  .contact-form-wrap{padding:36px 24px}
+  .form-row{grid-template-columns:1fr}
+  .map-section{height:280px}
+
+  /* Footer */
+  footer{padding:40px 24px 24px}
+  .footer-top{grid-template-columns:1fr;gap:28px}
+  .footer-bottom{flex-direction:column;align-items:flex-start;gap:8px}
+}
+
+/* Extra small phones */
+@media(max-width:400px){
+  .hero-h1{font-size:36px}
+  .nav-logo{font-size:15px}
+  .nav-logo-mark{width:28px;height:28px;font-size:12px}
+  .gallery-grid{grid-template-columns:1fr}
+  .gal-item:nth-child(7){grid-column:auto}
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-logo" onclick="showPage('home')">
+    <div class="nav-logo-mark">A</div>
+    Apex Tint Co.
+  </div>
+  <ul class="nav-links">
+    <li><a onclick="showPage('home')" class="active-lnk">Home</a></li>
+    <li><a onclick="showPage('about')">About</a></li>
+    <li><a onclick="showPage('services')">Services</a></li>
+    <li><a onclick="showPage('gallery')">Gallery</a></li>
+    <li><a onclick="showPage('contact')">Contact</a></li>
+  </ul>
+  <button class="nav-cta" onclick="showPage('contact')">Get a Quote</button>
+  <button class="ham" id="ham" onclick="toggleMob()">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<div class="mob-menu" id="mob-menu">
+  <a onclick="showPage('home');closeMob()">Home</a>
+  <a onclick="showPage('about');closeMob()">About</a>
+  <a onclick="showPage('services');closeMob()">Services</a>
+  <a onclick="showPage('gallery');closeMob()">Gallery</a>
+  <a onclick="showPage('contact');closeMob()" class="mob-cta">Get a Quote</a>
+</div>
+
+<!-- ══════════ HOME ══════════ -->
+<div id="home" class="page active">
+
+  <!-- Hero -->
+  <section class="hero">
+    <img class="hero-img" src="pexels-introspectivedsgn-4732674.jpg" alt="Detail shop" />
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <div class="hero-eyebrow">Allen, TX — Serving the DFW Corridor</div>
+      <h1 class="hero-h1">Your Car.<br><em>Protected.</em><br>Perfected.</h1>
+      <p class="hero-sub">Window tint, ceramic coating, and paint protection for drivers who care about the details.</p>
+      <div class="hero-actions">
+        <button class="btn-red" onclick="showPage('contact')">Get a Free Quote</button>
+        <button class="btn-outline" onclick="showPage('services')">View Services</button>
+      </div>
+    </div>
+    <div class="hero-badge">
+      <div class="hero-badge-num">2019</div>
+      <div class="hero-badge-label">Est. Allen, TX</div>
+    </div>
+  </section>
+
+  <!-- Ticker -->
+  <div class="ticker-bar">
+    <div class="ticker-inner">
+      <span>Window Tint</span>
+      <span>Ceramic Coating</span>
+      <span>Paint Protection Film</span>
+      <span>Paint Correction</span>
+      <span>Allen, TX</span>
+      <span>Lifetime Warranty</span>
+      <span>Window Tint</span>
+      <span>Ceramic Coating</span>
+      <span>Paint Protection Film</span>
+      <span>Paint Correction</span>
+      <span>Allen, TX</span>
+      <span>Lifetime Warranty</span>
+    </div>
+  </div>
+
+  <!-- Intro split -->
+  <div class="intro-strip">
+    <div class="intro-left">
+      <div class="section-label">Who We Are</div>
+      <h2>Precision installs.<br>Zero shortcuts.</h2>
+      <p>Apex Tint Co. was built by car enthusiasts who got tired of average work. Every job that leaves our shop is held to the same standard — whether it's a daily driver or something you take to the track on weekends.</p>
+      <p>We use only premium films and coatings from brands that back their products with real warranties. No cheap imports, no guesswork.</p>
+      <button class="btn-outline" onclick="showPage('about')">Our Story</button>
+    </div>
+    <div class="intro-right">
+      <img src="pexels-svjae-4157230.jpg" alt="Lamborghini Urus in shop" />
+      <div class="intro-right-tag">Lamborghini Urus — Full PPF + Tint</div>
+    </div>
+  </div>
+
+  <!-- Stats -->
+  <div class="stats-row">
+    <div class="stat">
+      <div class="stat-n">500+</div>
+      <div class="stat-l">Vehicles Completed</div>
+    </div>
+    <div class="stat">
+      <div class="stat-n">5★</div>
+      <div class="stat-l">Google Rating</div>
+    </div>
+    <div class="stat">
+      <div class="stat-n">6yr</div>
+      <div class="stat-l">In Business</div>
+    </div>
+    <div class="stat">
+      <div class="stat-n">LTD</div>
+      <div class="stat-l">Warranty Included</div>
+    </div>
+  </div>
+
+  <!-- Services Preview -->
+  <section class="svc-preview">
+    <div class="svc-preview-head">
+      <h2>What We Do</h2>
+      <button class="btn-outline" onclick="showPage('services')">All Services</button>
+    </div>
+    <div class="svc-grid">
+      <div class="svc-card" onclick="showPage('services')">
+        <img src="pexels-autorecords-10549258.jpg" alt="Window Tint" />
+        <div class="svc-card-body">
+          <div class="svc-card-num">01</div>
+          <div class="svc-card-name">Window Tint</div>
+          <div class="svc-card-sub">UV block · Heat rejection · Privacy</div>
+        </div>
+        <div class="svc-card-arrow"><svg viewBox="0 0 24 24"><path d="M7 17L17 7M17 7H7M17 7V17"/></svg></div>
+      </div>
+      <div class="svc-card" onclick="showPage('services')">
+        <img src="pexels-autorecords-10126667.jpg" alt="Ceramic Coating" />
+        <div class="svc-card-body">
+          <div class="svc-card-num">02</div>
+          <div class="svc-card-name">Ceramic Coating</div>
+          <div class="svc-card-sub">Hydrophobic · Gloss · Long-term protection</div>
+        </div>
+        <div class="svc-card-arrow"><svg viewBox="0 0 24 24"><path d="M7 17L17 7M17 7H7M17 7V17"/></svg></div>
+      </div>
+      <div class="svc-card wide" onclick="showPage('services')">
+        <img src="pexels-svjae-15489297.jpg" alt="Paint Protection Film" style="object-position:center 60%" />
+        <div class="svc-card-body">
+          <div class="svc-card-num">03 — 04</div>
+          <div class="svc-card-name">PPF &amp; Paint Correction</div>
+          <div class="svc-card-sub">Full-body film · Scratch removal · Swirl elimination</div>
+        </div>
+        <div class="svc-card-arrow"><svg viewBox="0 0 24 24"><path d="M7 17L17 7M17 7H7M17 7V17"/></svg></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Process -->
+  <section class="process-section">
+    <div class="section-label">How It Works</div>
+    <h2>Simple from start to finish.</h2>
+    <div class="process-steps">
+      <div class="process-step">
+        <div class="step-num">01</div>
+        <div class="step-title">Get a Quote</div>
+        <div class="step-desc">Fill out our form or give us a call. We respond same day, usually within the hour.</div>
+      </div>
+      <div class="process-step">
+        <div class="step-num">02</div>
+        <div class="step-title">Schedule a Drop-Off</div>
+        <div class="step-desc">Pick a time that works for you. We offer early morning drop-offs for busy schedules.</div>
+      </div>
+      <div class="process-step">
+        <div class="step-num">03</div>
+        <div class="step-title">We Go to Work</div>
+        <div class="step-desc">Your car is in the hands of trained installers using premium materials — no shortcuts.</div>
+      </div>
+      <div class="process-step">
+        <div class="step-num">04</div>
+        <div class="step-title">Drive It Home</div>
+        <div class="step-desc">Same or next-day turnaround on most jobs. We walk you through everything before you leave.</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Reviews -->
+  <section class="reviews-section">
+    <div class="section-label">What Clients Say</div>
+    <h2>The results speak.</h2>
+    <div class="reviews-grid">
+      <div class="review-card">
+        <div class="review-stars">★★★★★</div>
+        <p class="review-text">"Brought in my M4 for a full tint job and couldn't be happier. The edges are clean, no bubbles, and the heat rejection is immediately noticeable. Worth every dollar."</p>
+        <div class="review-author">Marcus T.</div>
+        <div class="review-vehicle">2022 BMW M4 — Full Tint</div>
+      </div>
+      <div class="review-card">
+        <div class="review-stars">★★★★★</div>
+        <p class="review-text">"These guys tinted my Urus and did PPF on the front end. The attention to detail is unreal. Every seam lines up perfectly. My car looks better than when it left the dealership."</p>
+        <div class="review-author">Derek R.</div>
+        <div class="review-vehicle">2023 Lamborghini Urus — Tint + PPF</div>
+      </div>
+      <div class="review-card">
+        <div class="review-stars">★★★★★</div>
+        <p class="review-text">"Got a ceramic coating for my daily driver. Six months later it still beads water like day one. The team was straightforward, no upsells, just honest about what I needed."</p>
+        <div class="review-author">Priya M.</div>
+        <div class="review-vehicle">2021 Tesla Model X — Ceramic</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Band -->
+  <div class="cta-band">
+    <div class="cta-band-left">
+      <h2>Ready to protect your investment?</h2>
+      <p>Same-day quotes. Most jobs completed in one day.</p>
+    </div>
+    <div class="cta-band-right">
+      <button class="btn-outline" onclick="showPage('gallery')">View Gallery</button>
+      <button class="btn-red" onclick="showPage('contact')">Get a Free Quote</button>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-top">
+      <div>
+        <div class="footer-brand-name">
+          <div class="nav-logo-mark">A</div>
+          Apex Tint Co.
+        </div>
+        <p class="footer-tagline">Premium window tint, ceramic coating, and paint protection for Allen, TX and surrounding DFW communities.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Navigation</h4>
+        <ul>
+          <li><a onclick="showPage('home')">Home</a></li>
+          <li><a onclick="showPage('about')">About</a></li>
+          <li><a onclick="showPage('services')">Services</a></li>
+          <li><a onclick="showPage('gallery')">Gallery</a></li>
+          <li><a onclick="showPage('contact')">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <ul>
+          <li><a href="tel:+19724550100">(972) 455-0100</a></li>
+          <li><a>1204 E Main St, Allen TX 75002</a></li>
+          <li><a>Mon–Fri: 8am – 6pm</a></li>
+          <li><a>Sat: 9am – 3pm</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="footer-copy">© 2025 Apex Tint Co. All rights reserved.</div>
+      <div class="footer-legal">
+        <a>Privacy Policy</a>
+        <a>Terms of Service</a>
+      </div>
+    </div>
+  </footer>
+
+</div><!-- /home -->
+
+<!-- ══════════ ABOUT ══════════ -->
+<div id="about" class="page">
+
+  <section class="about-hero">
+    <img src="pexels-svjae-4157230.jpg" alt="Lamborghini in detail shop" />
+    <div class="about-hero-content">
+      <div class="section-label">About Us</div>
+      <h1>Built for<br>Car People<br><span>By Car People</span></h1>
+      <p>Allen's most detail-obsessed tint and protection shop.</p>
+    </div>
+  </section>
+
+  <div class="about-body">
+    <div class="about-text">
+      <div class="section-label">Our Story</div>
+      <h2>We started because we couldn't find anyone we trusted to do it right.</h2>
+      <p>Apex Tint Co. opened in Allen, TX in 2019 out of pure frustration. After watching too many great cars leave shops with sloppy tint edges, bubbling film, and coating jobs that failed inside a year — we decided to do it ourselves.</p>
+      <p>Our founder came up in the industry working for a luxury dealership group in Dallas, where the standards were different. Every vehicle had to be right before it left the lot. That's the culture we brought to Apex — and it's not changed since day one.</p>
+      <p>Today we work on everything from daily commuters to six-figure exotics. The process is the same regardless of what's in the bay. No shortcuts, no excuses.</p>
+      <button class="btn-red" onclick="showPage('contact')">Get in Touch</button>
+    </div>
+    <div class="about-img">
+      <img src="pexels-introspectivedsgn-12920635.jpg" alt="Detail work" />
+    </div>
+  </div>
+
+  <div class="about-pillars">
+    <div class="pillar">
+      <div class="pillar-num">01</div>
+      <div class="pillar-title">Premium Materials Only</div>
+      <div class="pillar-desc">We don't stock cheap film. Every product we install comes from manufacturers who back their work with real warranties — not just words on a website.</div>
+    </div>
+    <div class="pillar">
+      <div class="pillar-num">02</div>
+      <div class="pillar-title">Trained Installers</div>
+      <div class="pillar-desc">Every technician in our shop has completed manufacturer training. We're not learning on your car. We've already done the reps.</div>
+    </div>
+    <div class="pillar">
+      <div class="pillar-num">03</div>
+      <div class="pillar-title">Honest Quotes</div>
+      <div class="pillar-desc">What we quote is what you pay. No surprise add-ons at pickup, no pressure to buy a package you don't need.</div>
+    </div>
+  </div>
+
+  <div class="about-cta-row">
+    <div>
+      <h3>Serving Allen, Frisco, McKinney, Plano &amp; surrounding DFW.</h3>
+      <p>Walk-ins welcome. Most quotes returned same day.</p>
+    </div>
+    <div style="display:flex;gap:12px;flex-wrap:wrap">
+      <button class="btn-outline" onclick="showPage('gallery')">See Our Work</button>
+      <button class="btn-red" onclick="showPage('contact')">Get a Quote</button>
+    </div>
+  </div>
+
+  <footer>
+    <div class="footer-top">
+      <div>
+        <div class="footer-brand-name"><div class="nav-logo-mark">A</div>Apex Tint Co.</div>
+        <p class="footer-tagline">Premium window tint, ceramic coating, and paint protection for Allen, TX and surrounding DFW communities.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Navigation</h4>
+        <ul>
+          <li><a onclick="showPage('home')">Home</a></li>
+          <li><a onclick="showPage('about')">About</a></li>
+          <li><a onclick="showPage('services')">Services</a></li>
+          <li><a onclick="showPage('gallery')">Gallery</a></li>
+          <li><a onclick="showPage('contact')">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <ul>
+          <li><a href="tel:+19724550100">(972) 455-0100</a></li>
+          <li><a>1204 E Main St, Allen TX 75002</a></li>
+          <li><a>Mon–Fri: 8am – 6pm</a></li>
+          <li><a>Sat: 9am – 3pm</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="footer-copy">© 2025 Apex Tint Co. All rights reserved.</div>
+      <div class="footer-legal"><a>Privacy Policy</a><a>Terms of Service</a></div>
+    </div>
+  </footer>
+
+</div><!-- /about -->
+
+<!-- ══════════ SERVICES ══════════ -->
+<div id="services" class="page">
+
+  <div class="services-hero">
+    <div class="section-label">What We Offer</div>
+    <h1>Services</h1>
+    <p>Every service is performed by trained installers using premium materials. No exceptions.</p>
+  </div>
+  <div class="services-divider"></div>
+
+  <div class="svc-list">
+
+    <div class="svc-row">
+      <div class="svc-row-img">
+        <img src="pexels-autorecords-10549258.jpg" alt="Window Tint" />
+        <div class="svc-row-num-overlay">01</div>
+      </div>
+      <div class="svc-row-body">
+        <div class="section-label">Service 01</div>
+        <div class="svc-row-name">Window Tint</div>
+        <p class="svc-row-desc">Block heat, cut glare, and add privacy without sacrificing visibility. We carry multiple film grades from entry-level dyed to high-performance ceramic tint with lifetime warranties.</p>
+        <div class="svc-includes">
+          <div class="svc-includes-label">What's Included</div>
+          <div class="svc-include-list">
+            <div class="svc-include-item">UV ray rejection up to 99%</div>
+            <div class="svc-include-item">Infrared heat rejection</div>
+            <div class="svc-include-item">Scratch-resistant coating</div>
+            <div class="svc-include-item">Texas VLT compliance</div>
+            <div class="svc-include-item">All windows + rear</div>
+            <div class="svc-include-item">Lifetime warranty option</div>
+          </div>
+        </div>
+        <div class="svc-price-row">
+          <div class="svc-price">From $199</div>
+          <div class="svc-price-note">Pricing varies by vehicle size &amp; film grade</div>
+        </div>
+        <div style="margin-top:20px"><button class="btn-red" onclick="showPage('contact')">Get a Quote</button></div>
+      </div>
+    </div>
+
+    <div class="svc-row">
+      <div class="svc-row-img">
+        <img src="pexels-autorecords-10126667.jpg" alt="Ceramic Coating" />
+        <div class="svc-row-num-overlay">02</div>
+      </div>
+      <div class="svc-row-body">
+        <div class="section-label">Service 02</div>
+        <div class="svc-row-name">Ceramic Coating</div>
+        <p class="svc-row-desc">A professional-grade coating that bonds to your paint and creates a hydrophobic, self-cleaning surface. Dramatically reduces wash time and keeps your car looking freshly detailed for years.</p>
+        <div class="svc-includes">
+          <div class="svc-includes-label">What's Included</div>
+          <div class="svc-include-list">
+            <div class="svc-include-item">Paint decontamination wash</div>
+            <div class="svc-include-item">Clay bar treatment</div>
+            <div class="svc-include-item">Light paint correction</div>
+            <div class="svc-include-item">Coating application</div>
+            <div class="svc-include-item">Hydrophobic top layer</div>
+            <div class="svc-include-item">2–5 year protection</div>
+          </div>
+        </div>
+        <div class="svc-price-row">
+          <div class="svc-price">From $699</div>
+          <div class="svc-price-note">Pricing based on vehicle size &amp; coating tier</div>
+        </div>
+        <div style="margin-top:20px"><button class="btn-red" onclick="showPage('contact')">Get a Quote</button></div>
+      </div>
+    </div>
+
+    <div class="svc-row">
+      <div class="svc-row-img">
+        <img src="pexels-tony-boyd-513947829-19205912.jpg" alt="Paint Protection Film" />
+        <div class="svc-row-num-overlay">03</div>
+      </div>
+      <div class="svc-row-body">
+        <div class="section-label">Service 03</div>
+        <div class="svc-row-name">Paint Protection Film</div>
+        <p class="svc-row-desc">Transparent urethane film that physically protects your paint from rock chips, road debris, and light scratches. The best long-term investment you can make for a vehicle you care about.</p>
+        <div class="svc-includes">
+          <div class="svc-includes-label">What's Included</div>
+          <div class="svc-include-list">
+            <div class="svc-include-item">Full or partial coverage</div>
+            <div class="svc-include-item">Self-healing topcoat</div>
+            <div class="svc-include-item">Optically clear film</div>
+            <div class="svc-include-item">Rock chip resistance</div>
+            <div class="svc-include-item">10-year manufacturer warranty</div>
+            <div class="svc-include-item">Edge-wrap installation</div>
+          </div>
+        </div>
+        <div class="svc-price-row">
+          <div class="svc-price">From $899</div>
+          <div class="svc-price-note">Pricing based on coverage area</div>
+        </div>
+        <div style="margin-top:20px"><button class="btn-red" onclick="showPage('contact')">Get a Quote</button></div>
+      </div>
+    </div>
+
+    <div class="svc-row">
+      <div class="svc-row-img">
+        <img src="pexels-introspectivedsgn-12920613.jpg" alt="Paint Correction" />
+        <div class="svc-row-num-overlay">04</div>
+      </div>
+      <div class="svc-row-body">
+        <div class="section-label">Service 04</div>
+        <div class="svc-row-name">Paint Correction</div>
+        <p class="svc-row-desc">Remove years of swirl marks, water spots, and light scratches through a multi-stage machine polishing process. Often done before a coating or PPF application to maximize results.</p>
+        <div class="svc-includes">
+          <div class="svc-includes-label">What's Included</div>
+          <div class="svc-include-list">
+            <div class="svc-include-item">Full wash + decontamination</div>
+            <div class="svc-include-item">Paint depth measurement</div>
+            <div class="svc-include-item">Single or multi-stage correction</div>
+            <div class="svc-include-item">Swirl &amp; scratch removal</div>
+            <div class="svc-include-item">Water spot elimination</div>
+            <div class="svc-include-item">Panel wipe-down + inspection</div>
+          </div>
+        </div>
+        <div class="svc-price-row">
+          <div class="svc-price">From $449</div>
+          <div class="svc-price-note">Pricing based on vehicle condition &amp; size</div>
+        </div>
+        <div style="margin-top:20px"><button class="btn-red" onclick="showPage('contact')">Get a Quote</button></div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- CTA Band -->
+  <div class="cta-band">
+    <div class="cta-band-left">
+      <h2>Not sure which service you need?</h2>
+      <p>We'll help you figure it out. No pressure, no upsells.</p>
+    </div>
+    <div class="cta-band-right">
+      <button class="btn-red" onclick="showPage('contact')">Talk to Us</button>
+    </div>
+  </div>
+
+  <footer>
+    <div class="footer-top">
+      <div>
+        <div class="footer-brand-name"><div class="nav-logo-mark">A</div>Apex Tint Co.</div>
+        <p class="footer-tagline">Premium window tint, ceramic coating, and paint protection for Allen, TX and surrounding DFW communities.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Navigation</h4>
+        <ul>
+          <li><a onclick="showPage('home')">Home</a></li>
+          <li><a onclick="showPage('about')">About</a></li>
+          <li><a onclick="showPage('services')">Services</a></li>
+          <li><a onclick="showPage('gallery')">Gallery</a></li>
+          <li><a onclick="showPage('contact')">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <ul>
+          <li><a href="tel:+19724550100">(972) 455-0100</a></li>
+          <li><a>1204 E Main St, Allen TX 75002</a></li>
+          <li><a>Mon–Fri: 8am – 6pm</a></li>
+          <li><a>Sat: 9am – 3pm</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="footer-copy">© 2025 Apex Tint Co. All rights reserved.</div>
+      <div class="footer-legal"><a>Privacy Policy</a><a>Terms of Service</a></div>
+    </div>
+  </footer>
+
+</div><!-- /services -->
+
+<!-- ══════════ GALLERY ══════════ -->
+<div id="gallery" class="page">
+
+  <div class="gallery-hero">
+    <div class="section-label">Our Work</div>
+    <h1>Gallery</h1>
+    <p>Every car that leaves our shop, leaves looking better than it arrived.</p>
+  </div>
+
+  <div class="gallery-filter">
+    <button class="gf-btn active" onclick="filterGallery('all',this)">All</button>
+    <button class="gf-btn" onclick="filterGallery('tint',this)">Tint</button>
+    <button class="gf-btn" onclick="filterGallery('coating',this)">Coating</button>
+    <button class="gf-btn" onclick="filterGallery('ppf',this)">PPF</button>
+  </div>
+
+  <div class="gallery-grid" id="gallery-grid">
+    <div class="gal-item" data-tag="coating" onclick="openLightbox(this)">
+      <img src="pexels-elpsyx-9277192.jpg" alt="Bentley Continental" />
+      <div class="gal-overlay"><svg viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/></svg></div>
+    </div>
+    <div class="gal-item" data-tag="tint" onclick="openLightbox(this)">
+      <img src="pexels-introspectivedsgn-5628264.jpg" alt="Red BMW M4" />
+      <div class="gal-overlay"><svg viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/></svg></div>
+    </div>
+    <div class="gal-item" data-tag="tint" onclick="openLightbox(this)">
+      <img src="pexels-arth-443963208-34965674.jpg" alt="Blue BMW 3 Series" />
+      <div class="gal-overlay"><svg viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/></svg></div>
+    </div>
+    <div class="gal-item" data-tag="ppf" onclick="openLightbox(this)">
+      <img src="pexels-tony-boyd-513947829-19205912.jpg" alt="Porsche in shop" />
+      <div class="gal-overlay"><svg viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/></svg></div>
+    </div>
+    <div class="gal-item" data-tag="ppf" onclick="openLightbox(this)">
+      <img src="pexels-autorecords-10126667.jpg" alt="Lamborghini door detail" />
+      <div class="gal-overlay"><svg viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/></svg></div>
+    </div>
+    <div class="gal-item" data-tag="coating" onclick="openLightbox(this)">
+      <img src="pexels-autorecords-10549258.jpg" alt="Teal Tesla" />
+      <div class="gal-overlay"><svg viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/></svg></div>
+    </div>
+    <div class="gal-item" data-tag="ppf" onclick="openLightbox(this)">
+      <img src="pexels-svjae-15489297.jpg" alt="White Lamborghini Urus" />
+      <div class="gal-overlay"><svg viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/></svg></div>
+    </div>
+    <div class="gal-item" data-tag="ppf" onclick="openLightbox(this)">
+      <img src="pexels-svjae-4157230.jpg" alt="Grey Lamborghini Urus" />
+      <div class="gal-overlay"><svg viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/></svg></div>
+    </div>
+    <div class="gal-item" data-tag="tint" onclick="openLightbox(this)">
+      <img src="pexels-introspectivedsgn-12920635.jpg" alt="Detail work closeup" />
+      <div class="gal-overlay"><svg viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/></svg></div>
+    </div>
+    <div class="gal-item" data-tag="coating" onclick="openLightbox(this)">
+      <img src="pexels-introspectivedsgn-27258918.jpg" alt="Coating work" />
+      <div class="gal-overlay"><svg viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/></svg></div>
+    </div>
+    <div class="gal-item" data-tag="tint" onclick="openLightbox(this)">
+      <img src="pexels-introspectivedsgn-12920613.jpg" alt="Car detail" />
+      <div class="gal-overlay"><svg viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/></svg></div>
+    </div>
+    <div class="gal-item" data-tag="tint" onclick="openLightbox(this)">
+      <img src="pexels-introspectivedsgn-4732674.jpg" alt="Car in shop" />
+      <div class="gal-overlay"><svg viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/></svg></div>
+    </div>
+    <div class="gal-item" data-tag="coating" onclick="openLightbox(this)">
+      <img src="pexels-introspectivedsgn-12920639.jpg" alt="Finishing detail" />
+      <div class="gal-overlay"><svg viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/></svg></div>
+    </div>
+    <div class="gal-item" data-tag="tint" onclick="openLightbox(this)">
+      <img src="pexels-ant-armada-322180244-27670977.jpg" alt="Car exterior" />
+      <div class="gal-overlay"><svg viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/></svg></div>
+    </div>
+    <div class="gal-item" data-tag="tint" onclick="openLightbox(this)">
+      <img src="pexels-dumitru-b-742240889-28772164.jpg" alt="Tesla Model X" />
+      <div class="gal-overlay"><svg viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/></svg></div>
+    </div>
+  </div>
+
+  <!-- Lightbox -->
+  <div class="lightbox" id="lightbox" onclick="closeLightbox()">
+    <div class="lb-close" onclick="closeLightbox()">&#215;</div>
+    <img id="lb-img" src="" alt="" onclick="event.stopPropagation()" />
+  </div>
+
+  <!-- CTA Band -->
+  <div class="cta-band" style="margin-top:2px">
+    <div class="cta-band-left">
+      <h2>Like what you see?</h2>
+      <p>Get a free quote today — most jobs completed same or next day.</p>
+    </div>
+    <div class="cta-band-right">
+      <button class="btn-red" onclick="showPage('contact')">Get a Free Quote</button>
+    </div>
+  </div>
+
+  <footer>
+    <div class="footer-top">
+      <div>
+        <div class="footer-brand-name"><div class="nav-logo-mark">A</div>Apex Tint Co.</div>
+        <p class="footer-tagline">Premium window tint, ceramic coating, and paint protection for Allen, TX and surrounding DFW communities.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Navigation</h4>
+        <ul>
+          <li><a onclick="showPage('home')">Home</a></li>
+          <li><a onclick="showPage('about')">About</a></li>
+          <li><a onclick="showPage('services')">Services</a></li>
+          <li><a onclick="showPage('gallery')">Gallery</a></li>
+          <li><a onclick="showPage('contact')">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <ul>
+          <li><a href="tel:+19724550100">(972) 455-0100</a></li>
+          <li><a>1204 E Main St, Allen TX 75002</a></li>
+          <li><a>Mon–Fri: 8am – 6pm</a></li>
+          <li><a>Sat: 9am – 3pm</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="footer-copy">© 2025 Apex Tint Co. All rights reserved.</div>
+      <div class="footer-legal"><a>Privacy Policy</a><a>Terms of Service</a></div>
+    </div>
+  </footer>
+
+</div><!-- /gallery -->
+
+<!-- ══════════ CONTACT ══════════ -->
+<div id="contact" class="page">
+
+  <div class="contact-hero">
+    <div class="section-label">Reach Out</div>
+    <h1>Get a Quote</h1>
+    <p>Fill out the form below and we'll get back to you same day. Usually faster.</p>
+  </div>
+
+  <div class="contact-body">
+    <div class="contact-info">
+
+      <div>
+        <div class="contact-block-label">Phone</div>
+        <div class="contact-block-value"><a href="tel:+19724550100">(972) 455-0100</a></div>
+        <div class="contact-block-sub">Call or text — we respond fast</div>
+      </div>
+
+      <div>
+        <div class="contact-block-label">Address</div>
+        <div class="contact-block-value">1204 E Main St</div>
+        <div class="contact-block-sub">Allen, TX 75002</div>
+      </div>
+
+      <div>
+        <div class="contact-block-label">Hours</div>
+        <div class="hours-list">
+          <div class="hours-row"><span class="day">Monday – Friday</span><span>8:00am – 6:00pm</span></div>
+          <div class="hours-row"><span class="day">Saturday</span><span>9:00am – 3:00pm</span></div>
+          <div class="hours-row"><span class="day">Sunday</span><span>Closed</span></div>
+        </div>
+      </div>
+
+      <div>
+        <div class="contact-block-label">Walk-ins</div>
+        <div class="contact-block-value">Always Welcome</div>
+        <div class="contact-block-sub">No appointment needed for estimates</div>
+      </div>
+
+    </div>
+
+    <div class="contact-form-wrap">
+      <h2>Request a Free Quote</h2>
+      <form id="quote-form" action="https://api.web3forms.com/submit" method="POST">
+        <input type="hidden" name="access_key" value="YOUR-WEB3FORMS-KEY-HERE" />
+        <input type="hidden" name="subject" value="New Quote Request — Apex Tint Co." />
+        <input type="hidden" name="redirect" value="" />
+
+        <div class="form-row">
+          <div class="form-group">
+            <label>First Name</label>
+            <input type="text" name="first_name" placeholder="John" required />
+          </div>
+          <div class="form-group">
+            <label>Last Name</label>
+            <input type="text" name="last_name" placeholder="Smith" required />
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label>Phone</label>
+            <input type="tel" name="phone" placeholder="(214) 555-0000" required />
+          </div>
+          <div class="form-group">
+            <label>Email</label>
+            <input type="email" name="email" placeholder="john@email.com" required />
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label>Vehicle (Year / Make / Model)</label>
+          <input type="text" name="vehicle" placeholder="2023 BMW M4" required />
+        </div>
+
+        <div class="form-group">
+          <label>Service Interested In</label>
+          <select name="service" required>
+            <option value="" disabled selected>Select a service</option>
+            <option>Window Tint</option>
+            <option>Ceramic Coating</option>
+            <option>Paint Protection Film (PPF)</option>
+            <option>Paint Correction</option>
+            <option>Multiple Services</option>
+            <option>Not Sure — Need Advice</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label>Additional Notes</label>
+          <textarea name="message" placeholder="Any details about your vehicle or what you're looking for..."></textarea>
+        </div>
+
+        <div class="form-submit">
+          <button type="submit" class="btn-red" style="width:100%;padding:16px;font-size:14px">Submit Request</button>
+        </div>
+        <p class="form-note">We typically respond within a few hours during business hours.</p>
+        <div class="form-success" id="form-success">Your request was sent. We'll be in touch shortly.</div>
+      </form>
+    </div>
+  </div>
+
+  <!-- Map -->
+  <div class="map-section">
+    <iframe
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3344.2!2d-96.66!3d33.10!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2sAllen%2C%20TX%2075002!5e0!3m2!1sen!2sus!4v1"
+      allowfullscreen=""
+      loading="lazy"
+      referrerpolicy="no-referrer-when-downgrade">
+    </iframe>
+  </div>
+
+  <footer>
+    <div class="footer-top">
+      <div>
+        <div class="footer-brand-name"><div class="nav-logo-mark">A</div>Apex Tint Co.</div>
+        <p class="footer-tagline">Premium window tint, ceramic coating, and paint protection for Allen, TX and surrounding DFW communities.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Navigation</h4>
+        <ul>
+          <li><a onclick="showPage('home')">Home</a></li>
+          <li><a onclick="showPage('about')">About</a></li>
+          <li><a onclick="showPage('services')">Services</a></li>
+          <li><a onclick="showPage('gallery')">Gallery</a></li>
+          <li><a onclick="showPage('contact')">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <ul>
+          <li><a href="tel:+19724550100">(972) 455-0100</a></li>
+          <li><a>1204 E Main St, Allen TX 75002</a></li>
+          <li><a>Mon–Fri: 8am – 6pm</a></li>
+          <li><a>Sat: 9am – 3pm</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="footer-copy">© 2025 Apex Tint Co. All rights reserved.</div>
+      <div class="footer-legal"><a>Privacy Policy</a><a>Terms of Service</a></div>
+    </div>
+  </footer>
+
+</div><!-- /contact -->
+
+<script>
+// Page router
+function showPage(id){
+  document.querySelectorAll('.page').forEach(p=>p.classList.remove('active'));
+  document.getElementById(id).classList.add('active');
+  document.querySelectorAll('.nav-links a').forEach(a=>a.classList.remove('active-lnk'));
+  const map={home:0,about:1,services:2,gallery:3,contact:4};
+  const links=document.querySelectorAll('.nav-links a');
+  if(links[map[id]])links[map[id]].classList.add('active-lnk');
+  window.scrollTo({top:0,behavior:'instant'});
+}
+
+// Mobile menu
+function toggleMob(){
+  document.getElementById('ham').classList.toggle('open');
+  document.getElementById('mob-menu').classList.toggle('open');
+}
+function closeMob(){
+  document.getElementById('ham').classList.remove('open');
+  document.getElementById('mob-menu').classList.remove('open');
+}
+
+// Gallery filter
+function filterGallery(tag,btn){
+  document.querySelectorAll('.gf-btn').forEach(b=>b.classList.remove('active'));
+  btn.classList.add('active');
+  document.querySelectorAll('.gal-item').forEach(item=>{
+    if(tag==='all'||item.dataset.tag===tag){
+      item.style.display='';
+    } else {
+      item.style.display='none';
+    }
+  });
+}
+
+// Lightbox
+function openLightbox(el){
+  const src=el.querySelector('img').src;
+  document.getElementById('lb-img').src=src;
+  document.getElementById('lightbox').classList.add('open');
+  document.body.style.overflow='hidden';
+}
+function closeLightbox(){
+  document.getElementById('lightbox').classList.remove('open');
+  document.body.style.overflow='';
+}
+document.addEventListener('keydown',e=>{if(e.key==='Escape')closeLightbox()});
+
+// Form
+document.getElementById('quote-form').addEventListener('submit',async function(e){
+  e.preventDefault();
+  const btn=this.querySelector('[type=submit]');
+  btn.textContent='Sending...';btn.disabled=true;
+  try{
+    const res=await fetch(this.action,{method:'POST',body:new FormData(this)});
+    if(res.ok){
+      document.getElementById('form-success').style.display='block';
+      this.reset();
+    }
+  }catch(err){}
+  btn.textContent='Submit Request';btn.disabled=false;
+});
+</script>
+</body>
+</html>
